@@ -8,28 +8,31 @@ import java.util.Set;
  
  public class GradesInfo {
 
-       // Helper Array to string
-       public static String arrayToString(int[] array){
-        String arrString= " ";
-        for (int i=0; i <array.length; i++){
+       // Helper Array to string function (May or may not be used)
+    public static String arrayToString(int[] array){
+     String arrString= " ";
+     for (int i=0; i <array.length; i++){
             arrString+=" " + array[i];
         };
         return arrString;
     }
 
 
-    //sort
-public static void sort() {  
-int [] array = new int [] {50, 34, 88, 92, 0, 100, 72, 99};  
-//invoking sort() method of the Arrays class  
-Arrays.sort(array);    
-//prints array using the for loop  
-for (int i = 0; i < array.length; i++)   
-{       
-System.out.println(array[i]);   
-}  
+       //nrMaxScores
+       //nrMinScores
+       //getRank
+       //getScore
 
-}
+       //sort pseudo code
+    public static void sort() {  
+     int [] array = new int [] {50, 34, 88, 92, 0, 100, 72, 99};  
+    // sort() method of the Arrays class  
+    Arrays.sort(array);    
+    //prints array using the for loop  
+    for (int i = 0; i < array.length; i++)   
+        {System.out.println(array[i]);
+      }  
+    }
 
 
 
@@ -42,14 +45,14 @@ System.out.println(array[i]);
             if array[i]= value
             return true
         return false*/
-    //7. isElementfunction
+    //7. perfectScore function
     public static boolean perfectScore(int[] array,int value) {
         for(int i =0; i < array.length; i ++)
             if(array[i] == value)
                 return true;
             return false;
     }
-    // //Tester for isElementfunction
+    // //Perfect score executioner
     public static void perfectScoreQ() {
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int value = 100;
@@ -75,7 +78,7 @@ System.out.println(array[i]);
                 return true;
             return false;
     }
-    // //Tester for isElementfunction
+    // Bottom score executioner
     public static void bottomScoreQ() {
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int value = 0;
@@ -106,7 +109,7 @@ System.out.println(array[i]);
             max = array[i];
             return max;
      }
-    //Student Scores
+    //Max score executioner
     public static void getMaxScore(){
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int max = findMax(testArray);
@@ -149,7 +152,7 @@ System.out.println(array[i]);
      public static void main(String[] args) throws IOException {
          
  
-         // Where the loop should end
+         // Checkpoint for loop
          boolean checkingGrades = true;
  
          try (// We'll use this to get input from the user.

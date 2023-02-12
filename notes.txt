@@ -18,4 +18,5 @@ we need a loop that asks the user to choose a number to execute one of the follo
 will have to restart the entire program 
 
 
-****Finish functions for getscore, getrank, highest score recipients, lowest score recipients, clean up code
+****Finish functions for getscore, getrank, highest score recipients, lowest score recipients, clean up code****
+*****make sure all testers and functions are present*****
