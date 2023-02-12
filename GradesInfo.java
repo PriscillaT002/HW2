@@ -186,7 +186,6 @@ import java.util.Set;
                 if (userResponse.equals("1")) {
                     System.out.println( "Please enter student's ID number.\n");
                     userResponse = userInput.nextLine().toUpperCase();}
-
  
                      
                 else if (userResponse.equals("2")) {
