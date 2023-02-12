@@ -15,6 +15,60 @@
         return arrString;
     }
 
+
+        //perfectScore pseudo code
+    /* 
+    input: array[], int value
+    output:boolean
+    method:
+        for i=0 thru array.length
+            if array[i]= value
+            return true
+        return false*/
+    //7. isElementfunction
+    public static boolean perfectScore(int[] array,int value) {
+        for(int i =0; i < array.length; i ++)
+            if(array[i] == value)
+                return true;
+            return false;
+    }
+    // //Tester for isElementfunction
+    public static void perfectScoreQ() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int value = 100;
+        boolean present = perfectScore(testArray, value);
+        System.out.println(present);
+
+    }
+
+
+    //score of zero pseudo code
+    /* 
+    input: array[], int value
+    output:boolean
+    method:
+        for i=0 thru array.length
+            if array[i]= value
+            return true
+        return false*/
+    //7. bottom score
+    public static boolean bottomScore(int[] array,int value) {
+        for(int i =0; i < array.length; i ++)
+            if(array[i] == value)
+                return true;
+            return false;
+    }
+    // //Tester for isElementfunction
+    public static void bottomScoreQ() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int value = 0;
+        boolean present = perfectScore(testArray, value);
+        System.out.println(present);
+
+    }
+
+
+
     //getMaxScore pseudo code
     /* input: array[]
     output:int max
@@ -41,6 +95,37 @@
         int max = findMax(testArray);
         System.out.println(max);
 
+
+    }
+
+        //findMin pseudo code
+    /* input: array[]
+    output:int min
+    method:
+        int array[] = {}
+        int i ; min
+        min = array[0]
+        for (i=0; i<array.length;i++) 
+            if (min > array[i])
+            min = array[i]
+            return min*/
+    //9. findMinfunction
+    public static int findMin(int[] array) {
+        
+        int i ; int min;
+        min = array[0];
+        for (i=0; i<array.length;i++) 
+            if (min > array[i])
+            min = array[i];
+            return min;
+
+     }
+
+    //Tester for findMinfunction
+    public static void testFindMin(){
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int min = findMin(testArray);
+        System.out.println(min);
 
     }
  
@@ -91,11 +176,13 @@
 
                 else if (userResponse.equals("3")) {
                     System.out.println("Did anyone receive a perfect score? :\n");
+                    perfectScoreQ();
                     userResponse = userInput.nextLine().toUpperCase();}
 
 
                 else if (userResponse.equals("4")) {
                     System.out.println("Did anyone receive a score of 0 percent? :\n");
+                    bottomScoreQ();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("5")) {
@@ -109,6 +196,7 @@
 
                 else if (userResponse.equals("7")) {
                     System.out.println("What was the lowest score? :\n");
+                    testFindMin();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("8")) {
@@ -120,7 +208,7 @@
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("0")) {
-                    System.out.println("Goodbye. Restart application to see menu options.\n");
+                    System.out.println("Goodbye. Restart application to see menu options again.\n");
                     checkingGrades = false;
                     userResponse = userInput.nextLine().toUpperCase();}
                     
