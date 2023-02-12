@@ -19,11 +19,15 @@ import java.util.Set;
 
 
     //sort
-public static void sort() {
-    int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-    sorted = Arrays.sort(testArray);
-
-    System.out.println(sorted);
+public static void sort() {  
+int [] array = new int [] {50, 34, 88, 92, 0, 100, 72, 99};  
+//invoking sort() method of the Arrays class  
+Arrays.sort(array);    
+//prints array using the for loop  
+for (int i = 0; i < array.length; i++)   
+{       
+System.out.println(array[i]);   
+}  
 
 }
 
