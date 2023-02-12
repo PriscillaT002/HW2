@@ -23,6 +23,7 @@ import java.util.Set;
        //getRank
        //getScore
 
+
        //sort pseudo code
     public static void sort() {  
      int [] array = new int [] {50, 34, 88, 92, 0, 100, 72, 99};  
@@ -163,7 +164,7 @@ import java.util.Set;
              // Students and grade options
              System.out.println("******************************************");
              System.out.println("***********CHECK STUDENT'S GRADES**********");
-             System.out.println("*******Student ID's: (1,2,3,4,5,6,7,8) *********");
+             System.out.println("*******Student ID's: (01,02,03,04,05,06,07,08) *********");
              System.out.println("******************************************\n");
              System.out.println("1. Get Score");
              System.out.println("2. Get Rank");
@@ -186,6 +187,7 @@ import java.util.Set;
                 if (userResponse.equals("1")) {
                     System.out.println( "Please enter student's ID number.\n");
                     userResponse = userInput.nextLine().toUpperCase();}
+
  
                      
                 else if (userResponse.equals("2")) {
