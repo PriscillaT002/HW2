@@ -1,8 +1,10 @@
 
- import java.io.IOException;
- import java.util.Hashtable;
- import java.util.Scanner;
- import java.util.Set;
+import java.io.IOException;
+import java.util.Arrays;
+import java.util.Hashtable;
+import java.util.Scanner;
+import java.util.Set;
+
  
  public class GradesInfo {
 
@@ -14,6 +16,17 @@
         };
         return arrString;
     }
+
+
+    //sort
+public static void sort() {
+    int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+    sorted = Arrays.sort(testArray);
+
+    System.out.println(sorted);
+
+}
+
 
 
         //perfectScore pseudo code
@@ -204,7 +217,8 @@
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("9")) {
-                    System.out.println("Here's all the scores sorted: \n");
+                    System.out.println("Here's all the scores sorted lowest to highest: \n");
+                    sort();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("0")) {

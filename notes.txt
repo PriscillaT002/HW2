@@ -16,3 +16,6 @@ we need a loop that asks the user to choose a number to execute one of the follo
 ****Loop has been create, will now need to create functions and tests and incorporate into each option
 ****Main issue, I don't know how to code a way to jump out of the loop so if the user wants to use any other function they
 will have to restart the entire program 
+
+
+****Finish functions for getscore, getrank, highest score recipients, lowest score recipients, clean up code
