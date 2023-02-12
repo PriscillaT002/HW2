@@ -5,6 +5,44 @@
  import java.util.Set;
  
  public class GradesInfo {
+
+       // Helper Array to string
+       public static String arrayToString(int[] array){
+        String arrString= " ";
+        for (int i=0; i <array.length; i++){
+            arrString+=" " + array[i];
+        };
+        return arrString;
+    }
+
+    //getMaxScore pseudo code
+    /* input: array[]
+    output:int max
+    method:
+        int array[] = {}
+        int i ; max
+        max = array[0]
+        for (i=0; i<array.length;i++) 
+            if (min < array[i])
+            min = array[i]
+            return max*/
+    //getMaxScore
+    public static int findMax(int[] array) {
+        int i ; int max;
+        max = array[0];
+        for (i=0; i<array.length;i++) 
+            if (max < array[i])
+            max = array[i];
+            return max;
+     }
+    //Student Scores
+    public static void getMaxScore(){
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int max = findMax(testArray);
+        System.out.println(max);
+
+
+    }
  
      public static void main(String[] args) throws IOException {
          
@@ -61,7 +99,8 @@
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("5")) {
-                    System.out.println("Who received the highest score? :\n");
+                    System.out.println("What was the highest score? :" );
+                    getMaxScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("6")) {
@@ -69,7 +108,7 @@
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("7")) {
-                    System.out.println("Who received the lowest score? :\n");
+                    System.out.println("What was the lowest score? :\n");
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("8")) {
@@ -81,7 +120,7 @@
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("0")) {
-                    System.out.println("Goodbye.\n");
+                    System.out.println("Goodbye. Restart application to see menu options.\n");
                     checkingGrades = false;
                     userResponse = userInput.nextLine().toUpperCase();}
                     
