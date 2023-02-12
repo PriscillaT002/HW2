@@ -10,6 +10,8 @@ we need a loop that asks the user to choose a number to execute one of the follo
 9sortedScores(): get a sorted list of all the scores (without any information about the id associated to each score).
 10quit
 
+****Total: 8 students, index of 7, Associated scores: 1:50, 2:34, 3:88, 4:92, 5:0, 6:100, 7:72, 8:99
+
 
 ****Loop has been create, will now need to create functions and tests and incorporate into each option
 ****Main issue, I don't know how to code a way to jump out of the loop so if the user wants to use any other function they
