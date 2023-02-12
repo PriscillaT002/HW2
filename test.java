@@ -32,7 +32,7 @@ public class test {
 
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int[] copy = findCount(testArray);
-        System.out.println("The highest score was achieved" + arrayToString(copy) + "time");
+        System.out.println("The highest score was achieved by : " + arrayToString(copy) + "student(s).");
 
     }
 
