@@ -19,8 +19,40 @@ import java.util.Set;
 
 
        //nrMaxScores
+       public static int arrayCount(int[] array, int item) {
+
+        int amt = 0;
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == item) {
+                amt++;
+            }
+            else {
+                amt = amt;
+            }
+        }
+        return amt;
+    }
+
+    public static void nrMaxScore(){
+
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int item = 100;
+        int copy = arrayCount(testArray, item);
+        System.out.println("The highest score was achieved by" +" "+ (copy) +" "+ "student(s).");
+
+    }
+
        //nrMinScores
+       public static void nrMinScore(){
+
+        int [] testArray={50, 34, 88, 92, 0, 0, 0, 100, 72, 99};
+        int item = 0;
+        int copy = arrayCount(testArray, item);
+        System.out.println("The lowest score was received by" +" "+ (copy) +" "+ "student(s).");
+
+    }
        //getRank
+       
        //getScore
 
 
@@ -213,6 +245,7 @@ import java.util.Set;
 
                 else if (userResponse.equals("6")) {
                     System.out.println("How many students received the highest score? :\n");
+                    nrMaxScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("7")) {
@@ -222,6 +255,7 @@ import java.util.Set;
 
                 else if (userResponse.equals("8")) {
                     System.out.println("How many students received the lowest score? :\n");
+                    nrMinScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 else if (userResponse.equals("9")) {
