@@ -54,7 +54,7 @@ import java.util.Set;
        //getRank
 
        //getScore
-       
+
 
 
        //sort pseudo code
@@ -220,7 +220,38 @@ import java.util.Set;
                 if (userResponse.equals("1")) {
                     System.out.println( "Please enter student's ID number.\n");
                     userResponse = userInput.nextLine().toUpperCase();}
+                    if (userResponse.equals("01"))
+                    {
+                        System.out.println( "Student 01 has a score of: 50\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
 
+                    else if (userResponse.equals("02")) {
+                        System.out.println("Student 02 has a score of: 34\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("03")) {
+                        System.out.println("Student 03 has a score of: 88\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("04")) {
+                        System.out.println("Student 04 has a score of: 92\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("05")) {
+                        System.out.println("Student 05 has a score of: 0\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("06")) {
+                        System.out.println("Student 06 has a score of: 100\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("07")) {
+                        System.out.println("Student 07 has a score of: 72\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
+
+                    else if (userResponse.equals("08")) {
+                        System.out.println("Student 08 has a score of: 99\n");
+                        userResponse = userInput.nextLine().toUpperCase();}
  
                      
                 else if (userResponse.equals("2")) {
