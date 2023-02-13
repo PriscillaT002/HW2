@@ -73,7 +73,7 @@ import java.util.Scanner;
                 return true;
             return false;
     }
-    
+
     // This was used to test my function but it is also called into the loop
     public static void bottomScoreQ() {
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
@@ -84,38 +84,71 @@ import java.util.Scanner;
     }
 
     // 5. Highest Score
+    public static int findMax(int[] array) {
+        int i ; int max;
+        max = array[0];
+        for (i=0; i<array.length;i++) 
+            if (max < array[i])
+            max = array[i];
+            return max;
+     }
+
+    // This was used to test my function but it is also called into the loop
+    public static void getMaxScore(){
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int max = findMax(testArray);
+        System.out.println(max);
+
+    }
+
 
     // 6. Highest Score Recipients
-    // 7. Lowest Score
-    // 8. Lowest Score Recipients
-    // 9. Sorted Scores
-    
-   
-
-
-       //nrMaxScores
-       public static int arrayCount(int[] array, int item) {
-
+    public static int arrayCount(int[] array, int item) {
         int amt = 0;
         for (int i = 0; i < array.length; i++) {
             if (array[i] == item) {
                 amt++;
             }
             else {
+                //added this because I needed something for the else statement. It doesn't have a use though
                 amt = amt;
             }
         }
         return amt;
     }
 
+    // This was used to test my function but it is also called into the loop
     public static void nrMaxScore(){
-
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int item = 100;
         int copy = arrayCount(testArray, item);
         System.out.println("The highest score was achieved by" +" "+ (copy) +" "+ "student(s).");
-
     }
+
+    // 7. Lowest Score
+    public static int findMin(int[] array) {   
+        int i ; int min;
+        min = array[0];
+        for (i=0; i<array.length;i++) 
+            if (min > array[i])
+            min = array[i];
+            return min;
+     }
+
+    // This was used to test my function but it is also called into the loop
+    public static void getMinScore(){
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int min = findMin(testArray);
+        System.out.println(min);
+    }
+    
+    // 8. Lowest Score Recipients
+    // 9. Sorted Scores
+    
+   
+
+
+
 
        //nrMinScores
        public static void nrMinScore(){
@@ -139,69 +172,6 @@ import java.util.Scanner;
     for (int i = 0; i < array.length; i++)   
         {System.out.println(array[i]);
       }  
-    }
-
-
-
-
-    //getMaxScore pseudo code
-    /* input: array[]
-    output:int max
-    method:
-        int array[] = {}
-        int i ; max
-        max = array[0]
-        for (i=0; i<array.length;i++) 
-            if (min < array[i])
-            min = array[i]
-            return max*/
-    //getMaxScore
-    public static int findMax(int[] array) {
-        int i ; int max;
-        max = array[0];
-        for (i=0; i<array.length;i++) 
-            if (max < array[i])
-            max = array[i];
-            return max;
-     }
-    //Max score executioner
-    public static void getMaxScore(){
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        int max = findMax(testArray);
-        System.out.println(max);
-
-
-    }
-
-        //findMin pseudo code
-    /* input: array[]
-    output:int min
-    method:
-        int array[] = {}
-        int i ; min
-        min = array[0]
-        for (i=0; i<array.length;i++) 
-            if (min > array[i])
-            min = array[i]
-            return min*/
-    //9. findMinfunction
-    public static int findMin(int[] array) {
-        
-        int i ; int min;
-        min = array[0];
-        for (i=0; i<array.length;i++) 
-            if (min > array[i])
-            min = array[i];
-            return min;
-
-     }
-
-    //Tester for findMinfunction
-    public static void testFindMin(){
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        int min = findMin(testArray);
-        System.out.println(min);
-
     }
  
      public static void main(String[] args) throws IOException {
@@ -308,7 +278,7 @@ import java.util.Scanner;
                  //7.Lowest score: returns the lowest score int in the array    
                 else if (userResponse.equals("7")) {
                     System.out.println("What was the lowest score? :\n");
-                    testFindMin();
+                    getMinScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                  //8.How many students received the lowest score: returns the int amount of ...
