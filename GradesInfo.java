@@ -46,7 +46,7 @@ import java.util.Scanner;
         System.out.println("7.==Students: 01,02,03,04,05,06,07,08==");
         System.out.print("Associated Scores: 50, 34, 88, 92, 0, 100, 72, 99\n");
         int[] present = getRanksArray(testArray);
-        System.out.println("Student's ranked (Based on scores):" + arrayToString(present));
+        System.out.println("Student's ranked out of class size 8 (Based on scores):" + arrayToString(present));
     }
 
     // 3. Perfect Score
