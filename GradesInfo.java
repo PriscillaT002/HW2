@@ -13,7 +13,7 @@ import java.util.Scanner;
  
  public class GradesInfo {
 
-       // Helper Array to string function (May or may not be used)
+    //00. Helper Array to string function
     public static String arrayToString(int[] array){
      String arrString= " ";
      for (int i=0; i <array.length; i++){
@@ -21,6 +21,76 @@ import java.util.Scanner;
         };
         return arrString;
     }
+    //0. Quit: This option is programmed into the loop, no function necessary
+
+    //1. GetScore: Since I was able to create my own array of grades I also programmed this into the loop
+
+    // 2. Get Rank
+    public static int[] getRanksArray(int[] array) {
+        int[] result = new int[array.length];
+        for (int i = 0; i < array.length; i++) {
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    count++;
+                }
+            }
+            result[i] = count + 1;
+        }
+        return result;
+    }
+
+    // I used this as my test function but also incorporated it into the loop
+    public static void getRank() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        System.out.println("7.==Students: 01,02,03,04,05,06,07,08==");
+        System.out.print("Associated Scores: 50, 34, 88, 92, 0, 100, 72, 99\n");
+        int[] present = getRanksArray(testArray);
+        System.out.println("Student's ranked (Based on scores):" + arrayToString(present));
+    }
+
+    // 3. Perfect Score
+    public static boolean perfectScore(int[] array,int value) {
+        for(int i =0; i < array.length; i ++)
+            if(array[i] == value)
+                return true;
+            return false;
+    }
+
+    // This was used to test my function but it is also called into the loop
+    public static void perfectScoreQ() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int value = 100;
+        boolean present = perfectScore(testArray, value);
+        System.out.println(present);
+
+    }
+
+    // 4. Score of Zero
+    public static boolean bottomScore(int[] array,int value) {
+        for(int i =0; i < array.length; i ++)
+            if(array[i] == value)
+                return true;
+            return false;
+    }
+    
+    // This was used to test my function but it is also called into the loop
+    public static void bottomScoreQ() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int value = 0;
+        boolean present = perfectScore(testArray, value);
+        System.out.println(present);
+
+    }
+
+    // 5. Highest Score
+
+    // 6. Highest Score Recipients
+    // 7. Lowest Score
+    // 8. Lowest Score Recipients
+    // 9. Sorted Scores
+    
+   
 
 
        //nrMaxScores
@@ -56,29 +126,6 @@ import java.util.Scanner;
         System.out.println("The lowest score was received by" +" "+ (copy) +" "+ "student(s).");
 
     }
-       //getRank
-       public static int[] getRanksArray(int[] array) {
-        int[] result = new int[array.length];
-    
-        for (int i = 0; i < array.length; i++) {
-            int count = 0;
-            for (int j = 0; j < array.length; j++) {
-                if (array[j] > array[i]) {
-                    count++;
-                }
-            }
-            result[i] = count + 1;
-        }
-        return result;
-    }
-    public static void testIsElement() {
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        System.out.println("7.==Students: 01,02,03,04,05,06,07,08==");
-        System.out.print("Associated Scores: 50, 34, 88, 92, 0, 100, 72, 99\n");
-        int[] present = getRanksArray(testArray);
-        System.out.println("Student's ranked (Based on scores):" + arrayToString(present));
-
-    }
 
 
 
@@ -94,58 +141,6 @@ import java.util.Scanner;
       }  
     }
 
-
-
-        //perfectScore pseudo code
-    /* 
-    input: array[], int value
-    output:boolean
-    method:
-        for i=0 thru array.length
-            if array[i]= value
-            return true
-        return false*/
-    //7. perfectScore function
-    public static boolean perfectScore(int[] array,int value) {
-        for(int i =0; i < array.length; i ++)
-            if(array[i] == value)
-                return true;
-            return false;
-    }
-    // //Perfect score executioner
-    public static void perfectScoreQ() {
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        int value = 100;
-        boolean present = perfectScore(testArray, value);
-        System.out.println(present);
-
-    }
-
-
-    //score of zero pseudo code
-    /* 
-    input: array[], int value
-    output:boolean
-    method:
-        for i=0 thru array.length
-            if array[i]= value
-            return true
-        return false*/
-    //7. bottom score
-    public static boolean bottomScore(int[] array,int value) {
-        for(int i =0; i < array.length; i ++)
-            if(array[i] == value)
-                return true;
-            return false;
-    }
-    // Bottom score executioner
-    public static void bottomScoreQ() {
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        int value = 0;
-        boolean present = perfectScore(testArray, value);
-        System.out.println(present);
-
-    }
 
 
 
@@ -282,7 +277,7 @@ import java.util.Scanner;
  
                 //2. get rank: returns the IDs of students and their grades and shows their ranks 
                 else if (userResponse.equals("2")) {
-                    testIsElement();
+                    getRank();
                     userResponse = userInput.nextLine().toUpperCase();}
 
                 //3. perfect score: returns true or false depending on whether or not 100 is present in the grades array
