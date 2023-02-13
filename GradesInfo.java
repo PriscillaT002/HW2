@@ -117,13 +117,25 @@ import java.util.Scanner;
         return amt;
     }
 
-    // This was used to test my function but it is also called into the loop
+    // This was used to test my function for counting the occurrences of the maximun score but it is also called into the loop
     public static void nrMaxScore(){
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int item = 100;
         int copy = arrayCount(testArray, item);
         System.out.println("The highest score was achieved by" +" "+ (copy) +" "+ "student(s).");
     }
+
+    // 8. Lowest Score Recipients
+    // This was used to test my function for counting the occurrences of the minimun score but it is also called into the loop
+    public static void nrMinScore(){
+
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        int item = 0;
+        int copy = arrayCount(testArray, item);
+        System.out.println("The lowest score was received by" +" "+ (copy) +" "+ "student(s).");
+
+    }
+
 
     // 7. Lowest Score
     public static int findMin(int[] array) {   
@@ -141,29 +153,11 @@ import java.util.Scanner;
         int min = findMin(testArray);
         System.out.println(min);
     }
-    
-    // 8. Lowest Score Recipients
+
+
     // 9. Sorted Scores
-    
-   
-
-
-
-
-       //nrMinScores
-       public static void nrMinScore(){
-
-        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        int item = 0;
-        int copy = arrayCount(testArray, item);
-        System.out.println("The lowest score was received by" +" "+ (copy) +" "+ "student(s).");
-
-    }
-
-
-
-
-       //sort pseudo code
+    //I was able to test this function just by calling it into main and without have to create another function that...
+    //...calls it. This function is called straight from the loop.
     public static void sort() {  
      int [] array = new int [] {50, 34, 88, 92, 0, 100, 72, 99};  
     // sort() method of the Arrays class  
@@ -173,10 +167,10 @@ import java.util.Scanner;
         {System.out.println(array[i]);
       }  
     }
- 
+
+    //Main that contains the loop and calls the functions above
      public static void main(String[] args) throws IOException {
          
- 
          // Checkpoint for loop
          boolean checkingGrades = true;
  
