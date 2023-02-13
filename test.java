@@ -43,5 +43,27 @@ public class test {
         System.out.println("7. ===Done:isElement===\n");
 
     }
+    public static void main(String[] args){
 
+        //===================
+        //Test Main Functions
+        //===================
+        // testCopy();
+        // testAddAll();
+        // testAddArrays();
+        // testMultiplyAll();
+        // testFindAverage();
+        // testSwap();
+           testIsElement();
+         //testIndexOf();
+        // testFindMin(); 
+        // testFindMinIndex();
+        // testFindMax();
+        // testFindMaxIndex();
+        // testReverse();                  
+        // testReturnReverse();
+        // testIntersection();
+        // testUnion();
+
+    }
 }
