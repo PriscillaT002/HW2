@@ -215,7 +215,7 @@ import java.util.Scanner;
          // Checkpoint for loop
          boolean checkingGrades = true;
  
-         try (// We'll use this to get input from the user.
+         try (// Takes user input
         Scanner userInput = new Scanner(System.in)) {
             // Storage for user's responses
              String userResponse = "";
@@ -223,7 +223,7 @@ import java.util.Scanner;
              // Students and grade options
              System.out.println("******************************************");
              System.out.println("***********CHECK STUDENT'S GRADES**********");
-             System.out.println("*******Student ID's: (01,02,03,04,05,06,07,08) *********");
+             System.out.println("*******Student ID's: (01,02,03,04,05,06,07,08)*********");
              System.out.println("******************************************\n");
              System.out.println("1. Get Score");
              System.out.println("2. Get Rank");
@@ -242,7 +242,8 @@ import java.util.Scanner;
              userResponse = userInput.nextLine().toUpperCase();
 
             do{
- 
+                 // Here we begin the different options of the loop
+                 //1. get score: nested loop for each student's ID number
                 if (userResponse.equals("1")) {
                     System.out.println( "Please enter student's ID number.\n");
                     userResponse = userInput.nextLine().toUpperCase();}
@@ -279,48 +280,57 @@ import java.util.Scanner;
                         System.out.println("Student 08 has a score of: 99\n");
                         userResponse = userInput.nextLine().toUpperCase();}
  
-                     
+                //2. get rank: returns the IDs of students and their grades and shows their ranks 
                 else if (userResponse.equals("2")) {
                     testIsElement();
                     userResponse = userInput.nextLine().toUpperCase();}
 
-
+                //3. perfect score: returns true or false depending on whether or not 100 is present in the grades array
                 else if (userResponse.equals("3")) {
                     System.out.println("Did anyone receive a perfect score? :\n");
                     perfectScoreQ();
                     userResponse = userInput.nextLine().toUpperCase();}
 
-
+                //4. score of zero: returns true or false depending on whether or not 0 is present in the grades array
                 else if (userResponse.equals("4")) {
                     System.out.println("Did anyone receive a score of 0 percent? :\n");
                     bottomScoreQ();
                     userResponse = userInput.nextLine().toUpperCase();}
-
+                
+                //5.Highest score: returns the highest score int in the array    
                 else if (userResponse.equals("5")) {
                     System.out.println("What was the highest score? :" );
                     getMaxScore();
                     userResponse = userInput.nextLine().toUpperCase();}
-
+                
+                //6.How many students received the highest score: returns the int amount of ...
+                //...times the highest score was present in the array, in this case the highest score was 100
                 else if (userResponse.equals("6")) {
                     System.out.println("How many students received the highest score? :\n");
                     nrMaxScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
+                 //7.Lowest score: returns the lowest score int in the array    
                 else if (userResponse.equals("7")) {
                     System.out.println("What was the lowest score? :\n");
                     testFindMin();
                     userResponse = userInput.nextLine().toUpperCase();}
 
+                 //8.How many students received the lowest score: returns the int amount of ...
+                //...times the lowest score was present in the array, in this case the highest score was 0   
                 else if (userResponse.equals("8")) {
                     System.out.println("How many students received the lowest score? :\n");
                     nrMinScore();
                     userResponse = userInput.nextLine().toUpperCase();}
 
+                //9.Sorted scores: returns a list of grades sorted from highest to lowest    
                 else if (userResponse.equals("9")) {
                     System.out.println("Here's all the scores sorted lowest to highest: \n");
                     sort();
                     userResponse = userInput.nextLine().toUpperCase();}
 
+                //10. Quit: Final option that allows the user to exit loop, however to go through th loop again the user...
+                //...will need to re-run the code    
                 else if (userResponse.equals("0")) {
                     System.out.println("Goodbye. Restart application to see menu options again.\n");
                     checkingGrades = false;
