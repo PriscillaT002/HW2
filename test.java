@@ -31,7 +31,7 @@ public class test {
         return result;
     }
     public static void testIsElement() {
-        int [] testArray={1,2,3,4};
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         //int value = 3;
         System.out.println("7.====== Testing: isElement =====");
         System.out.print("Input array: ");
@@ -39,7 +39,7 @@ public class test {
         System.out.print("Input value: ");
         //System.out.println(value);
         int[] present = getRanksArray(testArray);
-        System.out.println("Present ?:" + present);
+        System.out.println("Present ?:" + arrayToString(present));
         System.out.println("7. ===Done:isElement===\n");
 
     }
