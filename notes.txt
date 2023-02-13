@@ -4,7 +4,7 @@
  * A file for me to gather my thoughts and rant. Obstacles and solutions documented.
  */
 
-we need a loop that asks the user to choose a number to execute one of the following 10 functions
+I need a loop that asks the user to choose a number to execute one of the following 10 functions
 1getScore(): get my score, returns the score of students
 2getRank(): get my rank, returns the ranks of all students
 3perfectScoreQ(): did anybody receive a perfect score of (say) 100 (points)? Answer is True or False.
@@ -19,8 +19,15 @@ we need a loop that asks the user to choose a number to execute one of the follo
 ****Total: 8 students, total index of 7, Associated scores: 1:50, 2:34, 3:88, 4:92, 5:0, 6:100, 7:72, 8:99
 
 
-****Loop has been create, will now need to create functions and tests and incorporate into each option
+****UPDATE: Loop has been created, I will now need to create functions and tests and incorporate them into each option
+> I am planning on using the tests for each function directly from my loop. (Possibly?)
 
 ****Main issue, I still don't understand the concept on how to associate student IDs with grades so I coded my away around
 the issue and found solutions within my loop. 
+
+****FINAL REFLECTION: For this assignment there were parts that I didn't fully know how to code so I decided to go about them 
+using the skills that I do have. I believe that in class we were told that it would be okay if everything was contained within
+one file so that is how I approached the structure of my code. I think If I were more confident with loops I would've incorporated
+a way to print a response of "sorry I didn't understand that" when the user inputted a number that wasn't included in the grades
+menu. Instead my code just stops and needs to be re-runned through the VS code console.
 
