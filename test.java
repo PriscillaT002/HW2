@@ -32,15 +32,10 @@ public class test {
     }
     public static void testIsElement() {
         int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
-        //int value = 3;
-        System.out.println("7.====== Testing: isElement =====");
-        System.out.print("Input array: ");
-        System.out.println(arrayToString(testArray));
-        System.out.print("Input value: ");
-        //System.out.println(value);
+        System.out.println("7.==Students: 01,02,03,04,05,06,07,08==");
+        System.out.print("Associated Scores: 50, 34, 88, 92, 0, 100, 72, 99\n");
         int[] present = getRanksArray(testArray);
-        System.out.println("Present ?:" + arrayToString(present));
-        System.out.println("7. ===Done:isElement===\n");
+        System.out.println("Student's ranked (Based on scores):" + arrayToString(present));
 
     }
     public static void main(String[] args){

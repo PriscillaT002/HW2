@@ -52,8 +52,29 @@ import java.util.Set;
 
     }
        //getRank
+       public static int[] getRanksArray(int[] array) {
+        int[] result = new int[array.length];
+    
+        for (int i = 0; i < array.length; i++) {
+            int count = 0;
+            for (int j = 0; j < array.length; j++) {
+                if (array[j] > array[i]) {
+                    count++;
+                }
+            }
+            result[i] = count + 1;
+        }
+        return result;
+    }
+    public static void testIsElement() {
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
+        System.out.println("7.==Students: 01,02,03,04,05,06,07,08==");
+        System.out.print("Associated Scores: 50, 34, 88, 92, 0, 100, 72, 99\n");
+        int[] present = getRanksArray(testArray);
+        System.out.println("Student's ranked (Based on scores):" + arrayToString(present));
 
-       //getScore
+    }
+
 
 
 
@@ -255,7 +276,7 @@ import java.util.Set;
  
                      
                 else if (userResponse.equals("2")) {
-                    System.out.println("Please enter student't ID number.\n");
+                    testIsElement();
                     userResponse = userInput.nextLine().toUpperCase();}
 
 

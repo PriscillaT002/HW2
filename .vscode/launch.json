@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch GradesInfo",
+            "request": "launch",
+            "mainClass": "GradesInfo",
+            "projectName": "HW2-1_2802d892"
+        },
+        {
+            "type": "java",
+            "name": "Launch GradesTester",
+            "request": "launch",
+            "mainClass": "GradesTester",
+            "projectName": "HW2-1_2802d892"
+        },
+        {
+            "type": "java",
+            "name": "Launch Learning",
+            "request": "launch",
+            "mainClass": "Learning",
+            "projectName": "HW2-1_2802d892"
+        },
+        {
+            "type": "java",
+            "name": "Launch test",
+            "request": "launch",
+            "mainClass": "test",
+            "projectName": "HW2-1_2802d892"
+        }
+    ]
+}
