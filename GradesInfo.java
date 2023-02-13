@@ -8,9 +8,8 @@ import java.util.Set;
 /*
  * GradesInfo class
  * By: Priscilla Trejo, CSC 210, Smith College
- * Runs the game and prints out the instructions and questions for the Player to answer, progress, and explore.
- * @param HauntedHouse, Room, Player, Object
- * @return Futher actions and questions to determine how the Player will proceed and their ending.
+ * contains the functions for each required option from HW2 as well as the main interective loop.
+ * @return Futher actions and questions until the user chooses to quit the loop
  */
 
  
