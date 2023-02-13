@@ -5,6 +5,14 @@ import java.util.Hashtable;
 import java.util.Scanner;
 import java.util.Set;
 
+/*
+ * GradesInfo class
+ * By: Priscilla Trejo, CSC 210, Smith College
+ * Runs the game and prints out the instructions and questions for the Player to answer, progress, and explore.
+ * @param HauntedHouse, Room, Player, Object
+ * @return Futher actions and questions to determine how the Player will proceed and their ending.
+ */
+
  
  public class GradesInfo {
 
@@ -45,7 +53,7 @@ import java.util.Set;
        //nrMinScores
        public static void nrMinScore(){
 
-        int [] testArray={50, 34, 88, 92, 0, 0, 0, 100, 72, 99};
+        int [] testArray={50, 34, 88, 92, 0, 100, 72, 99};
         int item = 0;
         int copy = arrayCount(testArray, item);
         System.out.println("The lowest score was received by" +" "+ (copy) +" "+ "student(s).");

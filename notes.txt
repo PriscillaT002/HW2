@@ -1,6 +1,12 @@
+/*
+ * By: Priscilla Trejo, CSC 210, Smith College
+ * Notes
+ * A file for me to gather my thoughts and rant. Obstacles and solutions documented.
+ */
+
 we need a loop that asks the user to choose a number to execute one of the following 10 functions
-1getScore(): get my score (needs the id of the student)
-2getRank(): get my rank (needs the id of the student)
+1getScore(): get my score, returns the score of students
+2getRank(): get my rank, returns the ranks of all students
 3perfectScoreQ(): did anybody receive a perfect score of (say) 100 (points)? Answer is True or False.
 4bottomScoreQ(): did anybody receive a score of 0 points? Answer is True or False.
 5getMaxScore(): get the maximum score. 
@@ -8,15 +14,13 @@ we need a loop that asks the user to choose a number to execute one of the follo
 7getMinScore(): get the minimum score
 8nrMinScores(): how many students received the minimum score?
 9sortedScores(): get a sorted list of all the scores (without any information about the id associated to each score).
-10quit
+10 quit
 
-****Total: 8 students, index of 7, Associated scores: 1:50, 2:34, 3:88, 4:92, 5:0, 6:100, 7:72, 8:99
+****Total: 8 students, total index of 7, Associated scores: 1:50, 2:34, 3:88, 4:92, 5:0, 6:100, 7:72, 8:99
 
 
 ****Loop has been create, will now need to create functions and tests and incorporate into each option
-****Main issue, I don't know how to code a way to jump out of the loop so if the user wants to use any other function they
-will have to restart the entire program 
 
+****Main issue, I still don't understand the concept on how to associate student IDs with grades so I coded my away around
+the issue and found solutions within my loop. 
 
-****Finish functions for getscore, getrank, clean up code****
-*****make sure all testers and functions are present*****
